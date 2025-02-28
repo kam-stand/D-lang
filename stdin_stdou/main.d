@@ -10,6 +10,7 @@ void print_hello_world()
 }
 
 void main()
+
 {
     stdout.writeln("Hello world");
     print_hello_world();
@@ -20,7 +21,7 @@ void main()
     int num_students = 0;
     readf("%s\n", &num_students);
     writeln("The number of studetsn are: ", num_students);
-    int [2] array;
+    int[2] array;
     int index = 0;
     stdout.writeln("Please enter array value 1");
     readf("%d\n", &array[index++]);
@@ -28,7 +29,6 @@ void main()
     readf("%d\n", &array[index]);
     writeln("arr[0] = ", array[0], "\n", "arr[1] = ", array[1]);
 
-    
     // if you enter a character it will be an error as the format was "%d" not "%c"
     // See the error message below
     /** 
