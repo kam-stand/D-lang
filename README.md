@@ -172,4 +172,4 @@ I welcome:
 - Alternative solutions
 - Helpful notes and insights
 
-> ❗ This repository is mainly meant for newbies so adding or removing certain components should be done with caution. I hope 👼 by the time I am done with each chapter I can make more informal changes as of right now I sort of add as I go
+> ❗ Contributing to the repository in general should mainly focus on being direct, easy, and informative to newcomers learning the leanguage. Therefore, be **specific** when adding new material. For example, dont just add a link to a resoruce explain what it is, how it can be used, when to use it and etc.
