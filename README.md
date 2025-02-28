@@ -4,6 +4,15 @@ This is a repository filled with code, notes and information I have either gathe
 
 > I mainly code in C, Java, Python, and Bash. I came across D-lang randomly and I like that its statically typed, compiled and has the ability to manually manage memory.
 
+# Table of Contents
+
+- [D-lang](#d-lang)
+  - [Structure](#structure)
+  - [Resource Guide](#resource-guide)
+  - [Getting Started](#getting-started)
+  - [Implemented chapters](#implemented-chapters)
+  - [Contribution Guidelines](#contribution-guidelines)
+
 ## Structure
 
 Through my learning process I will try to be as neat and organized when going through the exercises and writing down notes, but the general format I have for this repository is each directory is essentially a chapter and the files are the exercises.
@@ -172,4 +181,4 @@ I welcome:
 - Alternative solutions
 - Helpful notes and insights
 
-> ❗ Contributing to the repository in general should mainly focus on being direct, easy, and informative to newcomers learning the leanguage. Therefore, be **specific** when adding new material. For example, dont just add a link to a resoruce explain what it is, how it can be used, when to use it and etc.
+> ❗ Contributing to the repository in general should mainly focus on being direct, easy, and informative to newcomers learning the leanguage. Therefore, be **specific** when adding new material. For example, dont just add a link to a resoruce. Explain what it is, how it can be used, when to use it and etc.
