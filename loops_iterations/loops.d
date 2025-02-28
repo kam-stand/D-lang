@@ -37,4 +37,14 @@ void main()
     }
     while (prime != false);
 
+    int number = 0;
+    while (true)
+    {
+        writeln("Enter a number ");
+        readf("%d\n", &number);
+        if (number != 3)
+        {
+            break;
+        }
+    }
 }
