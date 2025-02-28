@@ -15,10 +15,10 @@ Outside of the textbook, you will most likely need outside resources to help you
 
 The most optimal way to learn is of course through the textbook. However, I have provided links to a forum and a discord server that can be used as a means to help you in your journey🛣️.
 
-- ![link]([Discord Server](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://discord.com/invite/bMZk9Q4&ved=2ahUKEwiynsKdtuWLAxVkF1kFHXwAH9IQFnoECBgQAQ&usg=AOvVaw1zoiFc4O1YBlynaTO-Ka81))
-- ![link]([Forum ](https://forum.dlang.org/))
+- ([Discord Server](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://discord.com/invite/bMZk9Q4&ved=2ahUKEwiynsKdtuWLAxVkF1kFHXwAH9IQFnoECBgQAQ&usg=AOvVaw1zoiFc4O1YBlynaTO-Ka81))
+- ([Forum ](https://forum.dlang.org/))
 
-> :exclamation: There are plenty of other resources online that can be used to help you learn D-lang. The links mentioned above are essentially discussions, conversation and advice from more experienced developers within the D-lang community.A more **robust** and **definitive** resource is the D-lang official ![link]([website ](https://dlang.org/spec/spec.html)).
+> :exclamation: There are plenty of other resources online that can be used to help you learn D-lang. The links mentioned above are essentially discussions, conversation and advice from more experienced developers within the D-lang community.A more **robust** and **definitive** resource is the D-lang official ([website ](https://dlang.org/spec/spec.html)).
 Guide
 ## Getting Started
 
