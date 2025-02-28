@@ -60,3 +60,100 @@ If you want supplement your learning experience using this repository you're gon
      > :information_desk_person: If this does not work then search for code-d and select the "D Programming Language (code-d)" extension from the list.
 3. Version Control
    - You **WILL** make mistakes and its important to keep track of your progress so install [git](https://git-scm.com/downloads)
+
+## Implemented chapters
+
+- [ ] Foreword by Andrei Alexandrescu
+- [ ] Preface
+- [x] The Hello World Program `main`
+- [x] writeln and write
+- [x] Compilation
+- [x] Fundamental Types `char int double (and more)`
+- [x] Assignment and Order of Evaluation `=`
+- [x] Variables
+- [x] Standard Input and Output Streams `stdin stdout`
+- [x] Reading from the Standard Input
+- [x] Logical Expressions `bool true false ! == != < <= > >= || &&`
+- [x] if Statement `if else`
+- [x] while Loop `while continue break`
+- [ ] Integers and Arithmetic Operations `++ -- + - _ / % ^^ += -= _= /= %= ^^=`
+- [ ] Floating Point Types `.nan .infinity isNaN`
+- [ ] Arrays `[] .length ~ ~=`
+- [ ] Characters `char wchar dchar`
+- [ ] Slices and Other Array Features `.. $ .dup capacity`
+- [ ] Strings `char[] wchar[] dchar[] string wstring dstring`
+- [ ] Redirecting Standard Input and Output Streams
+- [ ] Files `File`
+- [ ] auto and typeof `auto typeof`
+- [ ] Name Scope
+- [ ] for Loop `for`
+- [ ] Ternary Operator ?: `?:`
+- [ ] Literals
+- [ ] Formatted Output `writef writefln`
+- [ ] Formatted Input
+- [ ] do-while Loop `do while`
+- [ ] Associative Arrays `.keys .values .byKey .byValue .byKeyValue .get .remove in`
+- [ ] foreach Loop `foreach .byKey .byValue .byKeyValue`
+- [ ] switch and case `switch, case, default, final switch`
+- [ ] enum `enum .min .max`
+- [ ] Functions `return void`
+- [ ] Immutability `enum const immutable .dup .idup`
+- [ ] Value Types and Reference Types `&
+- [ ] Function Parameters `in out ref inout lazy scope shared`
+- [ ] Lvalues and Rvalues `auto ref`
+- [ ] Lazy Operators
+- [ ] Program Environment `main stderr`
+- [ ] Exceptions `throw try catch finally`
+- [ ] scope `scope(exit) scope(success) scope(failure)`
+- [ ] assert and enforce `assert enforce`
+- [ ] Unit Testing `unittest`
+- [ ] Contract Programming `in out`
+- [ ] Lifetimes and Fundamental Operations
+- [ ] The null Value and the is Operator `null is !is`
+- [ ] Type Conversions `to assumeUnique cast`
+- [ ] Structs `struct . {} static, static this, static ~this`
+- [ ] Variable Number of Parameters `T[]... __MODULE__ __FILE__ __LINE__ __FUNCTION__ (and more)`
+- [ ] Function Overloading
+- [ ] Member Functions `toString`
+- [ ] const ref Parameters and const Member Functions `const ref, in ref, inout`
+- [ ] Constructor and Other Special Functions `this ~this this(this) opAssign @disable`
+- [ ] Operator Overloading `opUnary opBinary opEquals opCmp opIndex (and more)`
+- [ ] Classes `class new`
+- [ ] Inheritance `: super override abstract`
+- [ ] Object `toString opEquals opCmp toHash typeid TypeInfo`
+- [ ] Interfaces `interface static final`
+- [ ] destroy and scoped `destroy scoped`
+- [ ] Modules and Libraries `import, module, static this, static ~this`
+- [ ] Encapsulation and Protection Attributes `private protected public package`
+- [ ] Universal Function Call Syntax (UFCS)
+- [ ] Properties
+- [ ] Contract Programming for Structs and Classes `invariant`
+- [ ] Templates
+- [ ] Pragmas
+- [ ] alias and with `alias with`
+- [ ] alias this `alias this`
+- [ ] Pointers `* &`
+- [ ] Bit Operations `~ & | ^ >> >>> <<`
+- [ ] Conditional Compilation `debug, version, static if, static assert, \_\_traits`
+- [ ] is Expression `is()`
+- [ ] Function Pointers, Delegates, and Lambdas `function delegate => toString`
+- [ ] foreach with Structs and Classes `opApply empty popFront front (and more)`
+- [ ] Nested Functions, Structs, and Classes `static`
+- [ ] Unions `union`
+- [ ] Labels and goto `goto`
+- [ ] Tuples `tuple Tuple AliasSeq .tupleof foreach`
+- [ ] More Templates `template opDollar opIndex opSlice`
+- [ ] More Functions `inout pure nothrow @nogc @safe @trusted @system CTFE \_\_ctfe`
+- [ ] Mixins `mixin`
+- [ ] Ranges `InputRange ForwardRange BidirectionalRange RandomAccessRange OutputRange`
+- [ ] More Ranges `isInputRange ElementType hasLength inputRangeObject (and more)`
+- [ ] static foreach
+- [ ] Parallelism `parallel task asyncBuf map amap reduce`
+- [ ] Message Passing Concurrency `spawn thisTid ownerTid send receive (and more)`
+- [ ] Data Sharing Concurrency `synchronized, shared, shared static this, shared static ~this`
+- [ ] Fibers `call yield`
+- [ ] Memory Management `calloc realloc emplace destroy .alignof`
+- [ ] User Defined Attributes (UDA) `@`
+- [ ] Operator Precedence
+
+> ☝️ The check list above was actually produced using file I/O operations with the D-programming language. See `./stdin_stdou/info.txt` for more information on how it was done. Its a great way to see how concise and poerful the language is

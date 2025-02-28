@@ -1,0 +1,15 @@
+I used D-lang in this case to play with the file I/O operation and string utilities like append.
+The file.txt is actually the list of chapters from the textbook copied and pasted which I then iterated over and appended '- [ ]' to the front.
+I did this because instead of manually writing each check box for each chapter I used D-langs' simple to use syntax and appended it to each line corresponding to a chapter.
+See the file_manipulation.d code to see how simple it was. This script was used to add the chapters into the README.
+
+pseudocode:
+1. open a file to read
+2. open a file to write to
+3. iterate until the end of the file
+4. inside the loop read a line
+5. create a string object
+6. use the `~` keyword to append the string object and line
+7. write to new file
+8. loop ends 
+9. close files
