@@ -53,11 +53,15 @@ This is a youtube playlist from `Mike Shah` who essentially goes over the D prog
 If you want supplement your learning experience using this repository you're gonna need a couple things before you Started
 
 1. D-lang Compiler - To run the actual D source files like `main.d` you will need a compiler which can be found using this [link](https://dlang.org/download.html)
+   
    > :sunglasses: If you are on linux you can use the script or check the third party downloads for directions in regards to your specific distribution
+
 2. Text editor or IDE
    - I used VScode and Gedit as my code editor but it does not matter what you choose just note that syntax highlighting, auto completion and other lang features are up to your disposal
    - In case you're wondering what extension I used for VScode its the following `webfreak.dlang-bundle`.
+
      > :information_desk_person: If this does not work then search for code-d and select the "D Programming Language (code-d)" extension from the list.
+
 3. Version Control
    - You **WILL** make mistakes and its important to keep track of your progress so install [git](https://git-scm.com/downloads)
 
@@ -156,4 +160,4 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] User Defined Attributes (UDA) `@`
 - [ ] Operator Precedence
 
-> ☝️ The check list above was actually produced using file I/O operations with the D-programming language. See `./stdin_stdou/info.txt` for more information on how it was done. Its a great way to see how concise and poerful the language is
+> ☝️ The check list above was actually produced using file I/O operations with the D-programming language. See `./stdin_stdou/info.txt` for more information on how it was done. Its a great way to see how concise and powerful the language is
