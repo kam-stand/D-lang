@@ -1,0 +1,1 @@
+This chapter was about basic arithmetic types from floats, ints, truncations and etc. I did not complete each exercise but rather the ones that seemed the most functional important see the print_floats and calculator functions
