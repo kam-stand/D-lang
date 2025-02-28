@@ -1,6 +1,8 @@
 # D-lang
 
-This is a repository filled with code, notes and information I have either gathered or learned while reading the textbook📗 from this [link](http://ddili.org/ders/d.en/index.html). Essentially, this repository serves as a personal documentation of my journey learning :school_satchel: the D programming language
+This is a repository filled with code, notes and information I have either gathered or learned while reading the textbook📗 from this [link](http://ddili.org/ders/d.eenn/index.html). Essentially, this repository serves as a personal documentation of my journey learning :school_satchel: the D programming language
+
+> I mainly code in C, Java, Python, and Bash. I came across D-lang randomly and I like that its statically types, compiled and has the ability to manually manage memory. 
 
 ## Structure
 
@@ -23,7 +25,7 @@ The most optimal way to learn is of course through the textbook. However, I have
 This is a youtube playlist from `Mike Shah` who essentially goes over the D programming language perfect for beginners like you and me! I found his videos more helpful after reading the textbooks and doing the exercises.
 - [Youtube](https://www.youtube.com/watch?v=HS7X9ERdjM4&list=PLvv0ScY6vfd9Fso-3cB4CGnSlW0E4btJV)
 
-> :exclamation: There are plenty of other resources online that can be used to help you learn D-lang. The links mentioned above are essentially discussions, conversation and advice from more experienced developers within the D-lang community. A more **robust** and **definitive** resource is the D-lang official [website](https://dlang.org/spec/spec.html).
+> 🚩 There are plenty of other resources online that can be used to help you learn D-lang. The links mentioned above are essentially discussions, conversation and advice from more experienced developers within the D-lang community. A more **robust** and **definitive** resource is the D-lang official [website](https://dlang.org/spec/spec.html).
 
 ## Getting Started
 

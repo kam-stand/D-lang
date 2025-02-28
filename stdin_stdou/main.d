@@ -1,5 +1,6 @@
 module stdin_stdou.main;
 import std.stdio;
+import std.algorithm;
 
 void print_hello_world()
 {
