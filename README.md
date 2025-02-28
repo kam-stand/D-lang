@@ -53,15 +53,11 @@ This is a youtube playlist from `Mike Shah` who essentially goes over the D prog
 If you want supplement your learning experience using this repository you're gonna need a couple things before you Started
 
 1. D-lang Compiler - To run the actual D source files like `main.d` you will need a compiler which can be found using this [link](https://dlang.org/download.html)
-   
    > :sunglasses: If you are on linux you can use the script or check the third party downloads for directions in regards to your specific distribution
-
 2. Text editor or IDE
    - I used VScode and Gedit as my code editor but it does not matter what you choose just note that syntax highlighting, auto completion and other lang features are up to your disposal
    - In case you're wondering what extension I used for VScode its the following `webfreak.dlang-bundle`.
-
      > :information_desk_person: If this does not work then search for code-d and select the "D Programming Language (code-d)" extension from the list.
-
 3. Version Control
    - You **WILL** make mistakes and its important to keep track of your progress so install [git](https://git-scm.com/downloads)
 
@@ -80,8 +76,8 @@ If you want supplement your learning experience using this repository you're gon
 - [x] Logical Expressions `bool true false ! == != < <= > >= || &&`
 - [x] if Statement `if else`
 - [x] while Loop `while continue break`
-- [ ] Integers and Arithmetic Operations `++ -- + - _ / % ^^ += -= _= /= %= ^^=`
-- [ ] Floating Point Types `.nan .infinity isNaN`
+- [x] Integers and Arithmetic Operations `++ -- + - _ / % ^^ += -= _= /= %= ^^=`
+- [x] Floating Point Types `.nan .infinity isNaN`
 - [ ] Arrays `[] .length ~ ~=`
 - [ ] Characters `char wchar dchar`
 - [ ] Slices and Other Array Features `.. $ .dup capacity`
@@ -159,5 +155,21 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] Memory Management `calloc realloc emplace destroy .alignof`
 - [ ] User Defined Attributes (UDA) `@`
 - [ ] Operator Precedence
+  > ☝️ The check list above was actually produced using file I/O operations with the D-programming language. See `./stdin_stdou/info.txt` for more information on how it was done. Its a great way to see how concise and powerful the language is
 
-> ☝️ The check list above was actually produced using file I/O operations with the D-programming language. See `./stdin_stdou/info.txt` for more information on how it was done. Its a great way to see how concise and powerful the language is
+## Contribution Guidelines
+
+If you'd like to contribute to this learning repository:
+
+1. Fork the repository
+2. Create a new branch for your changes
+3. Submit a pull request with a clear description of your additions
+
+I welcome:
+
+- Additional exercises
+- Error corrections
+- Alternative solutions
+- Helpful notes and insights
+
+> ❗ This repository is mainly meant for newbies so adding or removing certain components should be done with caution. I hope 👼 by the time I am done with each chapter I can make more informal changes as of right now I sort of add as I go
