@@ -17,7 +17,7 @@ Table of Contents
 
 ## Structure
 
-Through my learning process I will try to be as neat and organized when going through the exercises and writing down notes, but the general format I have for this repository is each directory is essentially a chapter and the files are the exercises.
+Through my learning process I will try to be as neat and organized when going through the exercises and writing down notes, but the **general format** I have for this repository is each directory is essentially a chapter and the files are the exercises.
 
 ---
 
@@ -30,16 +30,13 @@ repository
 │   ├── exercise1.d
 └── chapter_tile
    ├── exercise1_5.d
-   ├── info.txt
-   └── notes.md
 ```
 
 > :flushed: The info.txt and notes.md are just additional notes I took while doing some of the exercises.
 
 ---
 
-> :exclamation: Not every folder will coincide to a direct mapping of the chapters in the textbook as I may have skipped over them or simply combined multiple, related, chapters together.
-> The exercises are not explicitly mentioned within the `.d` files in each directory but rather simply implemented to the best of my ability.
+> :exclamation: Beware that not all of the source files have every solution to the exercise as I mainly choose exercises to better help me understand concepts. Furthermore, not all chapter may be listed as they may have been combined to reduce reduncancy.
 
 ## Resource Guide
 
