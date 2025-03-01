@@ -1,3 +1,6 @@
 Static arrays are value types. They are passed to and returned by functions by value. Dynnamic are passed by reference similar to pointers as well
 If want to change the contents of an array like lets say via function must use ref type [] arr or use a dynamic arryay liters type [] arr
 static arry can be passed into only the ref type function or to a pointer to change the value or be put into a dynamic array Variable
+
+** According to discord pretty much everythin is pass by value including array unless explicitly mentioned with ref. For dynamic arrays its a struct with size_t len and T*.
+ the contents on the heap are not copied and only the pointer is passed by value

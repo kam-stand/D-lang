@@ -38,7 +38,7 @@ repository
 
 ---
 
-> :exclamation: Beware that not all of the source files have every solution to the exercise as I mainly choose exercises to better help me understand concepts. Furthermore, not all chapter may be listed as they may have been combined to reduce reduncancy.
+> :exclamation: Beware that not all solution to the exercises for each chapter was done. Furthermore, not all chapter may be listed as they may have been combined to reduce reduncancy. Since, I mainly was reading and then coding I usually filled in the gaps of my knowledge with exercises that helped me better grasp certain concepts. If you want to find all solutions to exercises then the textbook linked in this repository has them at the end of each chapter.
 
 ## Resource Guide
 
