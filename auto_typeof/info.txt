@@ -1,0 +1,4 @@
+the main idea behind auto and typeof is to infer a data type with exact precision as the lhs = rhs depending on the data type. 
+There is no need to explicilty mention the data type when creating a variable because you need to assign to some means which by default needs to be a type
+
+typeof and auto seem to be useful to check if certain variables are of the same type or at run time
