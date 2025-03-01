@@ -2,11 +2,12 @@
 
 - [Table of Contents](#table-of-contents)
 - [D-lang](#d-lang)
-  - [Structure](#structure)
+  - [Structure of repository](#structure-of-repository)
   - [Resource Guide](#resource-guide)
   - [Getting Started](#getting-started)
 - [Implemented chapters](#implemented-chapters)
-  - [Topic reference](#topic-reference) \* [Concepts](#concepts)
+- [Topic reference](#topic-reference)
+  - [Concepts](#concepts)
 - [Contribution Guidelines](#contribution-guidelines)
 
 # D-lang
