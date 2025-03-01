@@ -3,15 +3,17 @@
 This is a repository filled with code, notes and information I have either gathered or learned while reading the textbook📗 from this [link](http://ddili.org/ders/d.eenn/index.html). Essentially, this repository serves as a personal documentation of my journey learning :school_satchel: the D programming language
 
 > I mainly code in C, Java, Python, and Bash. I came across D-lang randomly and I like that its statically typed, compiled and has the ability to manually manage memory.
+Table of Contents
+=================
 
-# Table of Contents
-
-- [D-lang](#d-lang)
-  - [Structure](#structure)
-  - [Resource Guide](#resource-guide)
-  - [Getting Started](#getting-started)
-  - [Implemented chapters](#implemented-chapters)
-  - [Contribution Guidelines](#contribution-guidelines)
+* [D-lang](#d-lang)
+* [Table of Contents](#table-of-contents)
+   * [Structure](#structure)
+   * [Resource Guide](#resource-guide)
+   * [Getting Started](#getting-started)
+   * [Implemented chapters](#implemented-chapters)
+   * [Contribution Guidelines](#contribution-guidelines)
+   * [Tips and Tricks](#tips-and-tricks)
 
 ## Structure
 
