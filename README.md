@@ -1,21 +1,21 @@
+# Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [D-lang](#d-lang)
+  - [Structure](#structure)
+  - [Resource Guide](#resource-guide)
+  - [Getting Started](#getting-started)
+- [Implemented chapters](#implemented-chapters)
+  - [Topic reference](#topic-reference) \* [Concepts](#concepts)
+- [Contribution Guidelines](#contribution-guidelines)
+
 # D-lang
 
 This is a repository filled with code, notes and information I have either gathered or learned while reading the textbook📗 from this [link](http://ddili.org/ders/d.eenn/index.html). Essentially, this repository serves as a personal documentation of my journey learning :school_satchel: the D programming language
 
 > I mainly code in C, Java, Python, and Bash. I came across D-lang randomly and I like that its statically typed, compiled and has the ability to manually manage memory.
 
-# Table of Contents
-
-- [D-lang](#d-lang)
-- [Table of Contents](#table-of-contents)
-  - [Structure](#structure)
-  - [Resource Guide](#resource-guide)
-  - [Getting Started](#getting-started)
-  - [Implemented chapters](#implemented-chapters)
-  - [Contribution Guidelines](#contribution-guidelines)
-  - [Tips and Tricks](#tips-and-tricks)
-
-## Structure
+## Structure of repository
 
 Through my learning process I will try to be as neat and organized when going through the exercises and writing down notes, but the **general format** I have for this repository is each directory is essentially a chapter and the files are the exercises.
 
@@ -68,7 +68,7 @@ If you want supplement your learning experience using this repository you're gon
 3. Version Control
    - You **WILL** make mistakes and its important to keep track of your progress so install [git](https://git-scm.com/downloads)
 
-## Implemented chapters
+# Implemented chapters
 
 - [ ] Foreword by Andrei Alexandrescu
 - [ ] Preface
@@ -164,24 +164,7 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] Operator Precedence
   > ☝️ The check list above was actually produced using file I/O operations with the D-programming language. See `./stdin_stdou/info.txt` for more information on how it was done. Its a great way to see how concise and powerful the language is
 
-## Contribution Guidelines
-
-If you'd like to contribute to this learning repository:
-
-1. Fork the repository
-2. Create a new branch for your changes
-3. Submit a pull request with a clear description of your additions
-
-I welcome:
-
-- Additional exercises
-- Error corrections
-- Alternative solutions
-- Helpful notes and insights
-
-> ❗ Contributing to the repository in general should mainly focus on being direct, easy, and informative to newcomers learning the leanguage. Therefore, be **specific** when adding new material. For example, dont just add a link to a resoruce. Explain what it is, how it can be used, when to use it and etc.
-
-## Topic reference
+# Topic reference
 
 This is a table of certain concepts and summarized information I found useful when going though the textbook
 
@@ -194,7 +177,7 @@ This is a table of certain concepts and summarized information I found useful wh
 
 > ⚠️ Some of the tipcs and tricks may not be helpful at first because its just a concept. However, keep practicing
 
-#### Concepts
+## Concepts
 
 Some concepts I documented to help me better understand with demonstrations and examples
 
@@ -210,4 +193,29 @@ assert(&stat[0] is statSlice.ptr); // true
 
 > ✏️ The slice in this case is simply just the pointer to the beginning of `int [4] stat [ 0, 1, 2, 3]` `plus its length:4` which in turn means `statSlice.ptr + stat.length = stat.ptr + stat.length`. See `./arrays/slices.d` for more info.
 
+**Compiler**
+
+Common flags I used when compiling D programs
+
+1. -w `include warnings`
+2. -O `optimization`
+3. -run `Compile, link, and run the program srcfile with the rest of the command line, args..., as the arguments to the program. No .o or executable file is left behind.`
+
 ---
+
+# Contribution Guidelines
+
+If you'd like to contribute to this learning repository:
+
+1. Fork the repository
+2. Create a new branch for your changes
+3. Submit a pull request with a clear description of your additions
+
+I welcome:
+
+- Additional exercises
+- Error corrections
+- Alternative solutions
+- Helpful notes and insights
+
+> ❗ Contributing to the repository in general should mainly focus on being direct, easy, and informative to newcomers learning the leanguage. Therefore, be **specific** when adding new material. For example, dont just add a link to a resoruce. Explain what it is, how it can be used, when to use it and etc.
