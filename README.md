@@ -102,8 +102,8 @@ If you want supplement your learning experience using this repository you're gon
 - [x] do-while Loop `do while`
 - [x] Associative Arrays `.keys .values .byKey .byValue .byKeyValue .get .remove in`
 - [x] foreach Loop `foreach .byKey .byValue .byKeyValue`
-- [ ] switch and case `switch, case, default, final switch`
-- [ ] enum `enum .min .max`
+- [x] switch and case `switch, case, default, final switch`
+- [x] enum `enum .min .max`
 - [ ] Functions `return void`
 - [ ] Immutability `enum const immutable .dup .idup`
 - [ ] Value Types and Reference Types `&
