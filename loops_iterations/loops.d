@@ -26,6 +26,23 @@ bool isPrime(int num)
 
 void main()
 {
+
+    // make associative array of "twenty" to 20, "thirty" to 30, "forty" to 40, "fifty" to 50
+    writeln("Associative array  are just dictionaries in python");
+    int[string] ages = ["twenty": 20, "thirty": 30, "forty": 40, "fifty": 50];
+    foreach (key, value; ages)
+    {
+        writeln(key, " is ", value);
+
+    }
+    writeln(ages["thirty"]);
+
+    int[2] numbers = [1, 2];
+    foreach_reverse (i, number; numbers)
+    {
+        writeln("Index: ", i, " Number: ", number);
+    }
+
     bool prime;
     do
     {
