@@ -3,8 +3,8 @@ import std.stdio;
 /** 
  * Authors: https://github.com/kam-stand
  */
- 
- /**Version: 
+
+/**Version: 
         0.0.1
 **/
 
@@ -16,13 +16,10 @@ import std.stdio;
     Link: https://dlang.org/dstyle.html
     **/
 
-
-
 /****************************
 
 This is an example file to show case the compiler flags within dmd
 **/
-
 
 /**
 * This is a function that will simply print the sum of the two variables using printf
@@ -37,12 +34,20 @@ void foo()
 {
     int a = 12;
     int b = 13;
-    printf("a + b = %d\n", a+b);
+    printf("a + b = %d\n", a + b);
 }
 
-
-
-void main(){
-    writeln("Compiling with -D flag");
+void main()
+{
+    writeln("Compiling with -w -O flag");
     foo();
 }
+/**
+*/
+
+// compile with dmd -w -run main.d
+// void main()
+// {
+//     int x = 5;
+//     return x;
+//}
