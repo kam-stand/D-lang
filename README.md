@@ -92,16 +92,16 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] Strings `char[] wchar[] dchar[] string wstring dstring`
 - [x] Redirecting Standard Input and Output Streams
 - [x] Files `File`
-- [ ] auto and typeof `auto typeof`
-- [ ] Name Scope
-- [ ] for Loop `for`
+- [x] auto and typeof `auto typeof`
+- [x] Name Scope
+- [x] for Loop `for`
 - [ ] Ternary Operator ?: `?:`
 - [ ] Literals
 - [ ] Formatted Output `writef writefln`
 - [ ] Formatted Input
-- [ ] do-while Loop `do while`
+- [x] do-while Loop `do while`
 - [ ] Associative Arrays `.keys .values .byKey .byValue .byKeyValue .get .remove in`
-- [ ] foreach Loop `foreach .byKey .byValue .byKeyValue`
+- [x] foreach Loop `foreach .byKey .byValue .byKeyValue`
 - [ ] switch and case `switch, case, default, final switch`
 - [ ] enum `enum .min .max`
 - [ ] Functions `return void`
