@@ -1,0 +1,25 @@
+definition of associative array
+    value_type[key_type] associative_array_name;
+
+- associative arrays have the same if properties of regular arrays like length
+
+- can remove with .remove
+
+- clear - removes all
+
+
+
+
+
+properties:
+    .length returns the number of key-value pairs.
+    .keys returns a copy of all keys as a dynamic array.
+    .byKey provides access to the keys without copying them; we will see how .byKey is used in foreach loops in the next chapter.
+    .values returns a copy of all values as a dynamic array.
+    .byValue provides access to the values without copying them.
+    .byKeyValue provides access to the key-value pairs without copying them.
+    .rehash may make the array more efficient in some cases, such as after inserting a large number of key-value pairs.
+    .sizeof is the size of the array reference (it has nothing to do with the number of key-value pairs in the table and is the same value for all associative arrays).
+    .get returns the value if it exists, the default value otherwise.
+    .remove removes the specified key and its value from the array.
+    .clear removes all elements.
