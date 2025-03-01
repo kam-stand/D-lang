@@ -23,17 +23,16 @@ Through my learning process I will try to be as neat and organized when going th
 repository
 ├── chapter_title
 │   ├── exercise1.d
-│   ├── exercise2.d
 │   └── notes.md
 ├── chapter2_title
 │   ├── exercise1.d
-│   ├── exercise2.d
-│   └── notes.md
 └── chapter_tile
    ├── exercise1_5.d
-   ├── exercise2.d
+   ├── info.txt
    └── notes.md
 ```
+
+> :flushed: The info.txt and notes.md are just additional notes I took while doing some of the exercises.
 
 ---
 
