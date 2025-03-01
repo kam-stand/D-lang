@@ -27,3 +27,6 @@ dmd -man
 ## Manual for ldc
 
 - an LLVM based compiler better optimization and more portable
+- ldc offers a more faster and optimized experienc.
+
+> the same flags for ldc apply for dmd- mostly

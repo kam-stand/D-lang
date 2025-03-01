@@ -193,13 +193,19 @@ assert(&stat[0] is statSlice.ptr); // true
 
 > ✏️ The slice in this case is simply just the pointer to the beginning of `int [4] stat [ 0, 1, 2, 3]` `plus its length:4` which in turn means `statSlice.ptr + stat.length = stat.ptr + stat.length`. See `./arrays/slices.d` for more info.
 
+---
+
 **Compiler**
 
-Common flags I used when compiling D programs
-
-1. -w `include warnings`
-2. -O `optimization`
+1. -wi `include warnings but dont treat them as errors`
+2. -O3 :skull_and_crossbones: `aggressive optimization`
 3. -run `Compile, link, and run the program srcfile with the rest of the command line, args..., as the arguments to the program. No .o or executable file is left behind.`
+
+```sh
+ldc2 -wi -O3 -run main.d
+```
+
+> :robot: The compiler of my choice was LDC it does seem to have better optimizations. The command above will equally work with `dmd` but the the `-O` flags are different for each compiler. The LDC compiler flags can be found running the command `ldc2 --help`
 
 ---
 
