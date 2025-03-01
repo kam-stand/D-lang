@@ -86,12 +86,12 @@ If you want supplement your learning experience using this repository you're gon
 - [x] while Loop `while continue break`
 - [x] Integers and Arithmetic Operations `++ -- + - _ / % ^^ += -= _= /= %= ^^=`
 - [x] Floating Point Types `.nan .infinity isNaN`
-- [ ] Arrays `[] .length ~ ~=`
+- [x] Arrays `[] .length ~ ~=`
 - [ ] Characters `char wchar dchar`
-- [ ] Slices and Other Array Features `.. $ .dup capacity`
+- [x] Slices and Other Array Features `.. $ .dup capacity`
 - [ ] Strings `char[] wchar[] dchar[] string wstring dstring`
 - [ ] Redirecting Standard Input and Output Streams
-- [ ] Files `File`
+- [x] Files `File`
 - [ ] auto and typeof `auto typeof`
 - [ ] Name Scope
 - [ ] for Loop `for`
@@ -181,3 +181,22 @@ I welcome:
 - Helpful notes and insights
 
 > ❗ Contributing to the repository in general should mainly focus on being direct, easy, and informative to newcomers learning the leanguage. Therefore, be **specific** when adding new material. For example, dont just add a link to a resoruce. Explain what it is, how it can be used, when to use it and etc.
+
+## Tips and Tricks
+
+| Topic   | Concept                  | Info                                                                                   |
+| ------- | ------------------------ | -------------------------------------------------------------------------------------- |
+| Array   | slices                   | A slice is a portion of an array and is just the pointer + length                      |
+| compile | flags                    | use the -run command as the final flag to immediately run the executable after compile |
+| Array   | $                        | This is the same as array.length                                                       |
+| Array   | slices and static arrays | a static array is passed by value, to change it needs to be slice or pointer           |
+
+> ⚠️ Some of the tipcs and tricks may not be helpful at first because its just a concept. However, keep practicing
+
+- Example of Array slice 
+```D
+int[4] stat = [0, 1, 2, 3];
+int[] statSlice = stat[];
+assert(&stat[0] is statSlice.ptr); // true
+```
+> ✏️ The slice in this case is simply just the pointer to the beginning of `int [4] stat [ 0, 1, 2, 3]` `plus its length:4` which in turn means `statSlice.ptr + stat.length = stat.ptr + stat.length`. See `./arrays/slices.d` for more info.
