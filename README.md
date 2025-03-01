@@ -100,7 +100,7 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] Formatted Output `writef writefln`
 - [ ] Formatted Input
 - [x] do-while Loop `do while`
-- [ ] Associative Arrays `.keys .values .byKey .byValue .byKeyValue .get .remove in`
+- [x] Associative Arrays `.keys .values .byKey .byValue .byKeyValue .get .remove in`
 - [x] foreach Loop `foreach .byKey .byValue .byKeyValue`
 - [ ] switch and case `switch, case, default, final switch`
 - [ ] enum `enum .min .max`
@@ -209,6 +209,7 @@ ldc2 -wi -O3 -run main.d
 > :robot: The compiler of my choice was LDC it does seem to have better optimizations. The command above will equally work with `dmd` but the the `-O` flags are different for each compiler. The LDC compiler flags can be found running the command `ldc2 --help`
 
 ---
+
 
 # Contribution Guidelines
 
