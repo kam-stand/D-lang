@@ -114,7 +114,7 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] Exceptions `throw try catch finally`
 - [ ] scope `scope(exit) scope(success) scope(failure)`
 - [ ] assert and enforce `assert enforce`
-- [ ] Unit Testing `unittest`
+- [x] Unit Testing `unittest`
 - [ ] Contract Programming `in out`
 - [ ] Lifetimes and Fundamental Operations
 - [ ] The null Value and the is Operator `null is !is`
@@ -223,6 +223,20 @@ D lang supports lambda functions and they are extremely powerful considering how
     writeln(mult);
 ```
 > :point_up: Notice how the lambda `n = > n * 100` has no name but this is also the same as `auto mult = (int a) => a * 100;`. The `.map!` comes from the `std.alogrithm` library and it it a template so I have to use `.array()` to make it an array return value. If I did not use `.array()` I could make the variable `mult` as auto.
+
+***
+
+**unit testing**
+D lang has built in support for testing and its AWESOME. Its short sweet and very concise
+> ❗ Testing is crucial in any software application. However, the **standard** unit test provided from D lang out of the box may or **may not be as extensive**. Therefore checkout these testing [frameworks](http://wiki.dlang.org/Libraries_and_Frameworks#Unit_Testing_Framework) for D-lang.
+```sh
+
+ldc2 -w -unittest main.d
+
+./main 
+
+```
+
 ---
 
 

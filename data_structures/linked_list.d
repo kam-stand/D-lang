@@ -37,13 +37,24 @@ Node* create_node(int value, TYPE t)
 // still leaking memory when using valgring.... spot the mistakes and fix it
 void free_linked_list(Node* head)
 {
-    Node* current = head;
-    while (current)
+    Node* temp;
+    while (head != null)
     {
-        Node* next = current.next;
-        GC.free(current);
-        current = next;
+        temp = head;
+        head = head.next;
+        GC.free(temp);
     }
+    /*
+
+   struct node* tmp;
+
+   while (head != NULL)
+    {
+       tmp = head;
+       head = head->next;
+       free(tmp);
+    }
+    */
 }
 void print_linked_list(Node *head)
 {
