@@ -211,7 +211,7 @@ ldc2 -wi -O3 -run main.d
 
 ***
 
-**lambda functions**
+**Lambda functions**
 
 D lang supports lambda functions and they are extremely powerful considering how vast D lang.
 - Using lambda functions offers a more shorter and concise syntax. Especially since you can have `local functions` inside of main funcionts
@@ -226,16 +226,15 @@ D lang supports lambda functions and they are extremely powerful considering how
 
 ***
 
-**unit testing**
+**Unit testing**
 
-D lang has built in support for testing and its AWESOME. Its short sweet and very concise
-> ❗ Testing is crucial in any software application. However, the **standard** unit test provided from D lang out of the box may or **may not be as extensive**. Therefore checkout these testing [frameworks](http://wiki.dlang.org/Libraries_and_Frameworks#Unit_Testing_Framework) for D-lang.
+D lang has built in support for testing and its AWESOME. Its short, sweet and very concise.
+
 ```sh
-
 ldc2 -w -unittest main.d
 ./main 
-
 ```
+> ❗ Testing is crucial in any software application. However, the **standard** unit test provided from D lang out of the box may or **may not be as extensive**. Therefore checkout these testing [frameworks](http://wiki.dlang.org/Libraries_and_Frameworks#Unit_Testing_Framework) for D-lang.
 
 ---
 
