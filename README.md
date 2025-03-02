@@ -104,7 +104,7 @@ If you want supplement your learning experience using this repository you're gon
 - [x] foreach Loop `foreach .byKey .byValue .byKeyValue`
 - [x] switch and case `switch, case, default, final switch`
 - [x] enum `enum .min .max`
-- [ ] Functions `return void`
+- [x] Functions `return void`
 - [ ] Immutability `enum const immutable .dup .idup`
 - [ ] Value Types and Reference Types `&
 - [ ] Function Parameters `in out ref inout lazy scope shared`
@@ -222,7 +222,7 @@ D lang supports lambda functions and they are extremely powerful considering how
     int [] mult =  numbers.map!(n => n * 100).array();
     writeln(mult);
 ```
-> :point_up: Notice how the lambda `n = > n * 100` has no name but this is also the same as `auto mult = (int a) => a * 100;`. The `.map!` comes from the std.alogrithm library and it it a template so I have to use `.array()` to make it an array return value. If I did not use `.array()` I could make the variable `mult` as auto.
+> :point_up: Notice how the lambda `n = > n * 100` has no name but this is also the same as `auto mult = (int a) => a * 100;`. The `.map!` comes from the `std.alogrithm` library and it it a template so I have to use `.array()` to make it an array return value. If I did not use `.array()` I could make the variable `mult` as auto.
 ---
 
 
