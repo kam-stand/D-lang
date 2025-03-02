@@ -1,0 +1,307 @@
+OVERVIEW: LDC - the LLVM D compiler
+
+USAGE: ldc2 [options] files --run Runs the resulting program, passing the remaining arguments to it
+
+OPTIONS:
+
+General options:
+
+  -D                                              - Generate documentation
+  --Dd=<directory>                                - Write documentation file to <directory>
+  --Df=<filename>                                 - Write documentation file to <filename>
+  -H                                              - Generate 'header' file
+  --HC                                            - Write C++ 'header' equivalent to stdout
+                                                    Use -HC=verbose to add comments for ignored declarations (e.g. extern(D))
+  --HCd=<directory>                               - Write C++ 'header' file to <directory>
+  --HCf=<filename>                                - Write C++ 'header' file to <filename> instead of stdout
+  --Hd=<directory>                                - Write 'header' file to <directory>
+  --Hf=<filename>                                 - Write 'header' file to <filename>
+  --Hkeep-all-bodies                              - Keep all function bodies in .di files
+  -I <directory>                                  - Look for imports also in <directory>
+  -J <directory>                                  - Look for string imports also in <directory>
+  Setting the optimization level:
+      -O                                            - Equivalent to -O3
+      --O0                                           - No optimizations (default)
+      --O1                                           - Simple optimizations
+      --O2                                           - Good optimizations
+      --O3                                           - Aggressive optimizations
+      --O4                                           - Equivalent to -O3
+      --O5                                           - Equivalent to -O3
+      --Os                                           - Like -O2 with extra optimizations for size
+      --Oz                                           - Like -Os but reduces code size further
+  -P <cppflag>                                    - Pass <cppflag> to C preprocessor
+  -X                                              - Generate JSON file
+  --Xf=<filename>                                 - Write JSON file to <filename>
+  --allinst                                       - Generate code for all template instantiations
+  --basic-block-address-map                       - Emit the basic block address map section
+  --betterC                                       - Omit generating some runtime information and helper functions
+  --boundscheck=<value>                           - Array bounds check
+    =off                                          -   Disabled
+    =safeonly                                     -   Enabled for @safe functions only
+    =on                                           -   Enabled for all functions
+  -c                                              - Compile only, do not link
+  --cache=<cache dir>                             - Enable compilation cache, using <cache dir> to store cache files
+  --cache-prune                                   - Enable cache pruning.
+  --cache-prune-expiration=<dur>                  - Sets the pruning expiration time of cache files to <dur> seconds (default: 1 week). Implies -cache-prune.
+  --cache-prune-interval=<dur>                    - Sets the cache pruning interval to <dur> seconds (default: 20 min). Set to 0 to force pruning. Implies -cache-prune.
+  --cache-prune-maxbytes=<size>                   - Sets the maximum cache size to <size> bytes. Implies -cache-prune.
+  --cache-prune-maxpercentage=<perc>              - Sets the cache size limit to <perc> percent of the available space (default: 75%). Implies -cache-prune.
+  --cache-retrieval=<value>                       - Set the cache retrieval mechanism (default: copy).
+    =copy                                         -   Make a copy of the cache file
+    =hardlink                                     -   Create a hard link to the cache file (recommended)
+    =link                                         -   Equal to 'hardlink' on Windows, but 'symlink' on Unix and OS X
+    =symlink                                      -   Create a symbolic link to the cache file
+  --check-functions-filter=<regex>                - Only emit checks for arguments of functions whose names match the given regular expression
+  --checkaction=<value>                           - Action to take when an assert/boundscheck/final-switch fails
+    =D                                            -   Usual D behavior of throwing an AssertError
+    =C                                            -   Call the C runtime library assert failure function
+    =halt                                         -   Halt the program execution (very lightweight)
+    =context                                      -   Use D assert with context information (when available)
+  --conf=<filename>                               - Use configuration file <filename>
+  --cov                                           - Compile-in code coverage analysis and .lst file generation
+                                                    Use -cov=<n> for n% minimum required coverage
+                                                    Use -cov=ctfe to include code executed during CTFE
+  --cov-increment=<value>                         - Set the type of coverage line count increment instruction
+    =default                                      -   Use the default (atomic)
+    =atomic                                       -   Atomic increment
+    =non-atomic                                   -   Non-atomic increment (not thread safe)
+    =boolean                                      -   Don't read, just set counter to 1
+  --crel                                          - Use CREL relocation format for ELF
+  --cs-profile-generate                           - Perform context sensitive PGO instrumentation
+  --cs-profile-path=<string>                      - Context sensitive profile file path
+  --d-debug[=<level/idents>]                        - Compile in debug code >= <level> or identified by <idents>
+  --d-version=<level/idents>                      - Compile in version code >= <level> or identified by <idents>
+  Allow deprecated language features and symbols:
+      -d                                            - Silently allow deprecated features and symbols
+      --dw                                           - Issue a message when deprecated features or symbols are used (default)
+      --de                                           - Issue an error when deprecated features or symbols are used (halt compilation)
+  --deps[=<filename>]                               - Write module dependencies to <filename> (only imports). '-deps' alone prints module dependencies (imports/file/version/debug/lib)
+  --enable-asserts=<value>                        - (*) Enable assertions
+  --enable-color=<value>                          - (*) Force colored console output
+  --enable-contracts=<value>                      - (*) Enable function pre- and post-conditions
+  --disable-d-passes                              - Disable all D-specific passes
+  --disable-gc2stack                              - Disable promotion of GC allocations to stack memory
+  --enable-inlining=<value>                       - (*) Enable function inlining (default in -O2 and higher)
+  --enable-invariants=<value>                     - (*) Enable invariants
+  --disable-loop-unrolling                        - Disable loop unrolling in all relevant passes
+  --disable-loop-vectorization                    - Disable the loop vectorization pass
+  --enable-preconditions=<value>                  - (*) Enable function preconditions
+  --disable-red-zone                              - Do not emit code that uses the red zone.
+  --disable-simplify-drtcalls                     - Disable simplification of druntime calls
+  --disable-simplify-libcalls                     - Disable simplification of well-known C runtime calls
+  --dllimport=<value>                             - Windows only: which extern(D) global variables to dllimport implicitly if not defined in a root module
+    =none                                         -   None (default with -link-defaultlib-shared=false)
+    =defaultLibsOnly                              -   Only druntime/Phobos symbols (default with -link-defaultlib-shared and -fvisibility=hidden).
+    =all                                          -   All (default with -link-defaultlib-shared and -fvisibility=public)
+  --dwarf-version=<int>                           - Dwarf version
+  --enable-jump-table-to-switch                   - Enable JumpTableToSwitch pass (default = off)
+  --enable-pgo-force-function-attrs               - Enable pass to set function attributes based on PGO profiles
+  --enable-postconditions=<value>                 - (*) Enable function postconditions
+  --enable-switch-errors=<value>                  - (*) Enable runtime errors for unhandled switch cases
+  --enable-vtable-profile-use                     - If ThinLTO and WPD is enabled and this option is true, vtable profiles will be used by ICP pass for more efficient indirect call sequence. If false, type profiles won't be used.
+  --enable-vtable-value-profiling                 - If true, the virtual table address will be instrumented to know the types of a C++ pointer. The information is used in indirect call promotion to do selective vtable-based comparison.
+  --expand-variadics-override=<value>             - Override the behaviour of expand-variadics
+    =unspecified                                  -   Use the implementation defaults
+    =disable                                      -   Disable the pass entirely
+    =optimize                                     -   Optimise without changing ABI
+    =lowering                                     -   Change variadic calling convention
+  --extern-std=<value>                            - C++ standard for name mangling compatibility
+    =c++98                                        -   Sets `__traits(getTargetInfo, "cppStd")` to `199711`
+    =c++11                                        -   Sets `__traits(getTargetInfo, "cppStd")` to `201103` (default)
+    =c++14                                        -   Sets `__traits(getTargetInfo, "cppStd")` to `201402`
+    =c++17                                        -   Sets `__traits(getTargetInfo, "cppStd")` to `201703`
+    =c++20                                        -   Sets `__traits(getTargetInfo, "cppStd")` to `202002`
+  --fcf-protection                                - Instrument control-flow architecture protection
+  --fcf-protection=<value>                        - Instrument control-flow architecture protection
+    =none
+    =branch
+    =return
+    =full
+  --fdmd-trace-functions                          - DMD-style runtime performance profiling of generated code
+  --fdpic                                         - Use the FDPIC ABI
+  --ffast-math                                    - Set @fastmath for all functions.
+  --ffat-lto-objects                              - Include both IR and object code in object file output; only effective when compiling with -flto.
+  --finstrument-functions                         - Instrument function entry and exit with GCC-compatible profiling calls
+  --float-abi=<value>                             - ABI/operations to use for floating-point types:
+    =default                                      -   Target default floating-point ABI
+    =soft                                         -   Software floating-point ABI and operations
+    =softfp                                       -   Soft-float ABI, but hardware floating-point instructions
+    =hard                                         -   Hardware floating-point ABI and instructions
+  --flto=<value>                                  - Set LTO mode, requires linker support
+    =full                                         -   Merges all input into a single module
+    =thin                                         -   Parallel importing and codegen (faster than 'full')
+  --flto-binary=<file>                            - Set the linker LTO plugin library file (e.g. LLVMgold.so (Unixes) or libLTO.dylib (Darwin))
+  --fno-delete-null-pointer-checks                - Treat null pointer dereference as defined behavior when optimizing (instead of _un_defined behavior). This prevents the optimizer from assuming that any dereferenced pointer must not have been null and optimize away the branches accordingly.
+  --fno-discard-value-names                       - Do not discard value names in LLVM IR
+  --fno-exceptions                                - Disable generation of exception stack unwinding code, assuming no Exceptions will be thrown
+  --fno-moduleinfo                                - Disable generation of ModuleInfos
+  --fno-plt                                       - Do not use the PLT to make function calls
+  --fno-rtti                                      - Disable generation of TypeInfos
+  --fp-contract=<value>                           - Enable aggressive formation of fused FP ops
+    =fast                                         -   Fuse FP ops whenever profitable
+    =on                                           -   Only fuse 'blessed' FP ops.
+    =off                                          -   Only fuse FP ops when the result won't be affected.
+  --fprofile-generate[=<filename>]                  - Generate instrumented code to collect a runtime profile into default.profraw (overriden by '=<filename>' or LLVM_PROFILE_FILE env var)
+  --fprofile-instr-generate[=<filename>]            - Generate instrumented code to collect a runtime profile into default.profraw (overriden by '=<filename>' or LLVM_PROFILE_FILE env var)
+  --fprofile-instr-use=<filename>                 - Use instrumentation data for profile-guided optimization
+  --fprofile-sample-use=<filename>                - Use instrumentation data for sample-based profile guided optimizations
+  --fprofile-use=<filename>                       - Use instrumentation data for profile-guided optimization
+  --frame-pointer=<value>                         - Specify frame pointer elimination optimization
+    =all                                          -   Disable frame pointer elimination
+    =non-leaf                                     -   Disable frame pointer elimination for non-leaf frame
+    =reserved                                     -   Enable frame pointer elimination, but reserve the frame pointer register
+    =none                                         -   Enable frame pointer elimination
+  --fsanitize=<checks>                            - Turn on runtime checks for various forms of undefined or suspicious behavior.
+  --fsanitize-address-use-after-return=<value>    - Select the mode of detecting stack use-after-return (UAR) in AddressSanitizer: never | runtime (default) | always
+    =never                                        -   Completely disables detection of UAR errors (reduces code size).
+    =runtime                                      -   Adds the code for detection, but it can be disabled via the runtime environment (ASAN_OPTIONS=detect_stack_use_after_return=0). Requires druntime support.
+    =always                                       -   Enables detection of UAR errors in all cases. (reduces code size, but not as much as never). Requires druntime support.
+  --fsanitize-blacklist=<file>                    - Add <file> to the blacklist files for the sanitizers.
+  --fsanitize-coverage=<type>                     - Specify the type of coverage instrumentation for -fsanitize
+  --fsanitize-memory-track-origins=<int>          - Enable origins tracking in MemorySanitizer (0=disabled, default)
+  --fsanitize-recover=<name>                      - Enable recovery for specified sanitizers ('all' = enable for all supported sanitizers).
+  --fsave-optimization-record[=<filename>]          - Generate a YAML optimization record file of optimizations performed by LLVM
+  --fsplit-stack                                  - Use segmented stack (see Clang documentation)
+  --fthread-model=<value>                         - Thread model
+    =global-dynamic                               -   Global dynamic TLS model (default)
+    =local-dynamic                                -   Local dynamic TLS model
+    =initial-exec                                 -   Initial exec TLS model
+    =local-exec                                   -   Local exec TLS model
+  --ftime-trace                                   - Turn on time profiler. Generates JSON file based on the output filename (also see --ftime-trace-file).
+  --ftime-trace-file=<filename>                   - Specify time trace file destination
+  --ftime-trace-granularity=<uint>                - Minimum time granularity (in microseconds) traced by time profiler
+  --fvisibility=<value>                           - Default visibility of symbols
+    =default                                      -   Hidden for Windows targets without -shared, otherwise public
+    =hidden                                       -   Only export symbols marked with 'export'
+    =public                                       -   Export all symbols
+  --fwarn-stack-size=<threshold>                  - Warn for stack size bigger than the given number
+  --fxray-instruction-threshold=<value>           - Sets the minimum function size to instrument with XRay
+  --fxray-instrument                              - Generate XRay instrumentation sleds on function entry and exit
+  --gdwarf                                        - Emit DWARF debuginfo (instead of CodeView) for MSVC targets
+  Generating debug information:
+      -g                                            - Add symbolic debug info
+      --gc                                           - Add symbolic debug info, optimize for non D debuggers
+      --gline-tables-only                            - Add line tables only
+  --hash-threshold=<uint>                         - Hash symbol names longer than this threshold (experimental)
+  --hexagon-add-build-attributes                  - 
+  --hwasan-percentile-cutoff-hot=<int>            - Hot percentile cuttoff.
+  --hwasan-random-rate=<number>                   - Probability value in the range [0.0, 1.0] to keep instrumentation of a function.
+  -i[=<pattern>]                                    - Include imported modules in the compilation
+  --identifiers=<value>                           - Specify the non-ASCII tables for D identifiers
+    =c99                                          -   C99
+    =c11                                          -   C11
+    =UAX31                                        -   UAX31
+    =all                                          -   All, the least restrictive set, which comes with all others (default)
+  --identifiers-importc=<value>                   - Specify the non-ASCII tables for ImportC identifiers
+    =c99                                          -   C99
+    =c11                                          -   C11 (default)
+    =UAX31                                        -   UAX31
+    =all                                          -   All, the least restrictive set, which comes with all others
+  --ignore                                        - Ignore unsupported pragmas (default)
+  --lib                                           - Create static library
+      --linkonce-templates                           - Use discardable linkonce_odr linkage for template symbols and lazily & recursively define all referenced instantiated symbols in each object file
+      --linkonce-templates-aggressive                - Experimental, more aggressive variant
+  --lint-abort-on-error                           - In the Lint pass, abort on errors.
+  --lower-allow-check-percentile-cutoff-hot=<int> - Hot percentile cuttoff.
+  --lower-allow-check-random-rate=<number>        - Probability value in the range [0.0, 1.0] of unconditional pseudo-random checks.
+  --lowmem                                        - Enable the garbage collector for the LDC front-end. This reduces the compiler memory requirements but increases compile times.
+  --lto-aix-system-assembler=<path>               - Path to a system assembler, picked up on AIX only
+  --lto-pass-remarks-filter=<regex>               - Only record optimization remarks from passes whose names match the given regular expression
+  --lto-pass-remarks-format=<format>              - The format used for serializing remarks (default: YAML)
+  --lto-pass-remarks-output=<filename>            - Output filename for pass remarks
+  --m32                                           - 32 bit target
+  --m64                                           - 64 bit target
+  --mabi=<string>                                 - The name of the ABI to be targeted from the backend
+  --main                                          - Add default main() if not present already (e.g. for unittesting)
+  --makedeps[=<filename>]                           - Write module dependencies in Makefile compatible format to <filename>/stdout (only imports)
+  --march=<string>                                - Architecture to generate code for (see --version)
+  --mattr=<a1,+a2,-a3,...>                        - Target specific attributes (-mattr=help for details)
+  --mcpu=<cpu-name>                               - Target a specific cpu type (-mcpu=help for details)
+  --mdcompute-file-prefix=<prefix>                - Prefix to prepend to the generated kernel files.
+  --mdcompute-targets=<targets>                   - Generates code for the specified DCompute target list. Use 'ocl-xy0' for OpenCL x.y, and 'cuda-xy0' for CUDA CC x.y
+  --mixin=<filename>                              - Expand and save mixins to <filename>
+  --mtriple=<string>                              - Override target triple
+  --mv=<<package.module>=<filespec>>              - Use <filespec> as source file for <package.module>
+  --noasm                                         - Disallow use of inline assembler
+  --nogc                                          - Do not allow code that generates implicit garbage collector calls
+  --o-                                            - Do not write object file
+  --od=<directory>                                - Write object files to <directory>
+  --of=<filename>                                 - Use <filename> as output file name
+  --op                                            - Preserve source path for output files
+  --oq                                            - Write object files with fully qualified names
+  --output-bc                                     - Write LLVM bitcode
+  --output-ll                                     - Write LLVM IR
+  --output-mlir                                   - Write MLIR
+  --output-o                                      - Write native object
+  --output-s                                      - Write native assembly
+  --plugin=<dynamic_library.so,lib2.so>           - Pass plugins to load.
+  --preview=<name>                                - Enable an upcoming language change identified by <name>, use ? for list
+  --promote-alloca-vector-loop-user-weight=<uint> - The bonus weight of users of allocas within loop when sorting profitable allocas
+  --release                                       - Compile release version, defaulting to disabled asserts/contracts/invariants, and bounds checks in @safe functions only
+  --relocation-model=<value>                      - Choose relocation model
+    =static                                       -   Non-relocatable code
+    =pic                                          -   Fully relocatable, position independent code
+    =dynamic-no-pic                               -   Relocatable external references, non-relocatable code
+    =ropi                                         -   Code and read-only data relocatable, accessed PC-relative
+    =rwpi                                         -   Read-write data relocatable, accessed relative to static base
+    =ropi-rwpi                                    -   Combination of ropi and rwpi
+  --revert=<name>                                 - Revert language change identified by <name>, use ? for list
+  --run <string>...                               - Runs the resulting program, passing the remaining arguments to it
+  --sampled-instr-burst-duration=<uint>           - Set the profile instrumentation burst duration, which can range from 0 to one less than the value of 'sampled-instr-period'. This number of samples will be recorded for each 'sampled-instr-period' count update. Setting to 1 enables simple sampling, in which case it is recommended to set 'sampled-instr-period' to a prime number.
+  --sampled-instr-period=<uint>                   - Set the profile instrumentation sample period. For each sample period, a fixed number of consecutive samples will be recorded. The number is controlled by 'sampled-instr-burst-duration' flag. The default sample period of 65535 is optimized for generating efficient code that leverages unsigned integer wrapping in overflow.
+  --sampled-instrumentation                       - Do PGO instrumentation sampling
+  --save-temp-labels                              - Don't discard temporary labels
+  --separate-named-sections                       - Use separate unique sections for named sections
+  --shared                                        - Create shared library (DLL)
+  --singleobj                                     - Create only a single output object file
+  --template-depth=<uint>                         - Set maximum number of nested template instantiations
+  --threads=<int>                                 - 
+  --transition=<name>                             - Help with language change identified by <name>, use ? for list
+  --unittest                                      - Compile in unit tests
+  --use-undef                                     - Use undef when generating programs.
+  -v                                              - Verbose
+  --v-cg                                          - Verbose codegen
+  --vcolumns                                      - Print character (column) numbers in diagnostics
+  --verror-style=<value>                          - Set the style for file/line number annotations on compiler messages
+    =digitalmars                                  -   'file(line[,column]): message' (default)
+    =gnu                                          -   'file:line[:column]: message', conforming to the GNU standard used by gcc and clang
+  --verror-supplements=<uint>                     - Limit the number of supplemental messages for each error (0 means unlimited)
+  --verrors=<uint>                                - Limit the number of error/deprecation messages (0 means unlimited)
+  --verrors-context                               - Show error messages with the context of the erroring source line
+  --verrors-spec                                  - Show errors from speculative compiles such as __traits(compiles,...)
+  --vgc                                           - List all gc allocations including hidden ones
+  --vtemplates                                    - List statistics on template instantiations
+                                                    Use -vtemplates=list-instances to additionally show all instantiation contexts for each template
+  --vv                                            - Print front-end/glue code debug log
+  --wasm-enable-exnref                            - WebAssembly exception handling (exnref)
+  Warnings:
+      -w                                            - Enable warnings as errors (compilation will halt)
+      --wi                                           - Enable warnings as messages (compilation will continue)
+  --write-experimental-debuginfo                  - Write debug info in the new non-intrinsic format. Has no effect if --preserve-input-debuginfo-format=true.
+  --x86-relax-relocations                         - Emit GOTPCRELX/REX_GOTPCRELX instead of GOTPCREL on x86-64 ELF
+  --x86-sse2avx                                   - Specify that the assembler should encode SSE instructions with VEX prefix
+
+Generic Options:
+
+  --help                                          - Display available options (--help-hidden for more)
+  --help-list                                     - Display list of available options (--help-list-hidden for more)
+  --version                                       - Display the version of this program
+
+Linking options:
+
+  -L <linkerflag>                                 - Pass <linkerflag> to the linker
+  --Xcc=<ccflag>                                  - Pass <ccflag> to GCC/Clang for linking/preprocessing
+  --defaultlib=<lib1,lib2,...>                    - Default libraries to link with (overrides previous)
+  --disable-linker-strip-dead                     - Do not try to remove unused symbols during linking
+  --gcc=<gcc|clang|...>                           - C compiler to use for linking (and external assembling). Defaults to the CC environment variable if set, otherwise to `cc`.
+  --link-defaultlib-debug                         - Link with debug versions of default libraries
+  --link-defaultlib-shared                        - Link with shared versions of default libraries. Defaults to true when generating a shared library (-shared).
+  --linker=<lld-link|lld|gold|bfd|...>            - Set the linker to use. When explicitly set to '' (nothing), prevents LDC from passing `-fuse-ld` to `cc`.
+  --mscrtlib=<libcmt[d]|msvcrt[d]>                - MS C runtime library to link with
+  --platformlib=<lib1,lib2,...>                   - Platform libraries to link with (overrides previous)
+  --static                                        - Create a statically linked binary, including all system dependencies
+
+-d-debug can also be specified without options, in which case it enables all debug checks (i.e. asserts, boundschecks, contracts and invariants) as well as acting as -d-debug=1.
+
+Boolean options can take an optional value, e.g., -link-defaultlib-shared=<true,false>.
+Boolean options marked with (*) also have a -disable-FOO variant with inverted meaning.

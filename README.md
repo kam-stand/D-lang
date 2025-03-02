@@ -208,6 +208,21 @@ ldc2 -wi -O3 -run main.d
 
 > :robot: The compiler of my choice was LDC it does seem to have better optimizations. The command above will equally work with `dmd` but the the `-O` flags are different for each compiler. The LDC compiler flags can be found running the command `ldc2 --help`
 
+
+***
+
+**lambda functions**
+
+D lang supports lambda functions and they are extremely powerful considering how vast D lang.
+- Using lambda functions offers a more shorter and concise syntax. Especially since you can have `local functions` inside of main funcionts
+
+```d
+
+    int [] numbers = [1, 2, 3, 4, 5];
+    int [] mult =  numbers.map!(n => n * 100).array();
+    writeln(mult);
+```
+> :point_up: Notice how the lambda `n = > n * 100` has no name but this is also the same as `auto mult = (int a) => a * 100;`. The `.map!` comes from the std.alogrithm library and it it a template so I have to use `.array()` to make it an array return value. If I did not use `.array()` I could make the variable `mult` as auto.
 ---
 
 
