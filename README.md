@@ -169,12 +169,13 @@ If you want supplement your learning experience using this repository you're gon
 
 This is a table of certain concepts and summarized information I found useful when going though the textbook
 
-| Topic   | Concept                  | Info                                                                                   |
-| ------- | ------------------------ | -------------------------------------------------------------------------------------- |
-| Array   | slices                   | A slice is a portion of an array and is just the pointer + length                      |
-| compile | flags                    | use the -run command as the final flag to immediately run the executable after compile |
-| Array   | $                        | This is the same as array.length                                                       |
-| Array   | slices and static arrays | a static array is passed by value, to change it needs to be slice or pointer           |
+| Topic    | Concept                  | Info                                                                                     |
+| -------- | ------------------------ | ---------------------------------------------------------------------------------------- |
+| Array    | slices                   | A slice is a portion of an array and is just the pointer + length                        |
+| compile  | flags                    | use the `-run` command as the final flag to immediately run the executable after compile |
+| Array    | `$`                      | This is the same as `array.length`                                                       |
+| Array    | slices and static arrays | a static array is `passed by value`, to change it needs to be slice or pointer           |
+| Function | Parameters               | `in` is only for input `out` is for out put of a value of variable and `ref` is both     |
 
 > ⚠️ Some of the tipcs and tricks may not be helpful at first because its just a concept. However, keep practicing
 
@@ -208,12 +209,12 @@ ldc2 -wi -O3 -run main.d
 
 > :robot: The compiler of my choice was LDC it does seem to have better optimizations. The command above will equally work with `dmd` but the the `-O` flags are different for each compiler. The LDC compiler flags can be found running the command `ldc2 --help`
 
-
-***
+---
 
 **Lambda functions**
 
 D lang supports lambda functions and they are extremely powerful considering how vast D lang.
+
 - Using lambda functions offers a more shorter and concise syntax. Especially since you can have `local functions` inside of main funcionts
 
 ```d
@@ -222,9 +223,10 @@ D lang supports lambda functions and they are extremely powerful considering how
     int [] mult =  numbers.map!(n => n * 100).array();
     writeln(mult);
 ```
+
 > :point_up: Notice how the lambda `n = > n * 100` has no name but this is also the same as `auto mult = (int a) => a * 100;`. The `.map!` comes from the `std.alogrithm` library and it it a template so I have to use `.array()` to make it an array return value. If I did not use `.array()` I could make the variable `mult` as auto.
 
-***
+---
 
 **Unit testing**
 
@@ -232,12 +234,12 @@ D lang has built in support for testing and its AWESOME. Its short, sweet and ve
 
 ```sh
 ldc2 -w -unittest main.d
-./main 
+./main
 ```
+
 > ❗ Testing is crucial in any software application. However, the **standard** unit test provided from D lang out of the box may or **may not be as extensive**. Therefore checkout these testing [frameworks](http://wiki.dlang.org/Libraries_and_Frameworks#Unit_Testing_Framework) for D-lang.
 
 ---
-
 
 # Contribution Guidelines
 
