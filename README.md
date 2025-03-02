@@ -227,12 +227,12 @@ D lang supports lambda functions and they are extremely powerful considering how
 ***
 
 **unit testing**
+
 D lang has built in support for testing and its AWESOME. Its short sweet and very concise
 > ❗ Testing is crucial in any software application. However, the **standard** unit test provided from D lang out of the box may or **may not be as extensive**. Therefore checkout these testing [frameworks](http://wiki.dlang.org/Libraries_and_Frameworks#Unit_Testing_Framework) for D-lang.
 ```sh
 
 ldc2 -w -unittest main.d
-
 ./main 
 
 ```
