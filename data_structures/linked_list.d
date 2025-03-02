@@ -2,6 +2,14 @@ module data_structures.linked_list;
 import std.stdio;
 import core.memory;
 
+/** 
+* This is a simple singly linked list application
+* It is not intended for use and it does contain memory leaks when I checked with valgrind
+* I mainly wrote this applicaiton to test my knowlesdge thusfar of the the garbage collector, structs, enums and data structures
+* The logic to add, and traverse a node is correct however I did not spend time on certain edge cases. Please use this as an example to create yourOWN ROBUST MEMORY SAFE LINKED LIST
+* I PLAN ON COMING BACK TO THIS FILE AFTER I HAVE GONE MORE OF THE TEXTBOOK AND CREATED PROJECTS USING D LANG. FURHTERMORE, PROGRAMMING IS ABOUT MAKING MISTAKES AND SOMETIMES LOOKING UGLY... WE ALL START SOMEWHERE
+*/
+
 enum TYPE
 {
     HEAD,
