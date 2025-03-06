@@ -16,9 +16,9 @@ void main()
     while (!file.eof()) // loop through the file
     {
         string line = strip(file.readln()); // read the line and remove any leading or trailing whitespaces
-        string append = "- [ ] "; // create string to append to the line
+        string append = "- [ ] "; // create string to append to the line to make each chapter a checklist item
         string new_line = append ~ line; // append the string to the line
-        writeln(new_line);
+        // writeln(new_line);
         new_file.writeln(new_line); // write the new line to the new file
 
     }
