@@ -95,18 +95,18 @@ If you want supplement your learning experience using this repository you're gon
 - [x] auto and typeof `auto typeof`
 - [x] Name Scope
 - [x] for Loop `for`
-- [ ] Ternary Operator ?: `?:`
+- [x] Ternary Operator ?: `?:` :eyes: `ckeck './recursion' folder to see examples using ternary operator`
 - [ ] Literals
-- [ ] Formatted Output `writef writefln`
-- [ ] Formatted Input
+- [x] Formatted Output `writef writefln`
+- [x] Formatted Input
 - [x] do-while Loop `do while`
 - [x] Associative Arrays `.keys .values .byKey .byValue .byKeyValue .get .remove in`
 - [x] foreach Loop `foreach .byKey .byValue .byKeyValue`
 - [x] switch and case `switch, case, default, final switch`
 - [x] enum `enum .min .max`
 - [x] Functions `return void`
-- [ ] Immutability `enum const immutable .dup .idup`
-- [ ] Value Types and Reference Types `&
+- [x] Immutability `enum const immutable .dup .idup`
+- [x] Value Types and Reference Types `&
 - [ ] Function Parameters `in out ref inout lazy scope shared`
 - [ ] Lvalues and Rvalues `auto ref`
 - [ ] Lazy Operators
@@ -137,11 +137,11 @@ If you want supplement your learning experience using this repository you're gon
 - [ ] Properties
 - [ ] Contract Programming for Structs and Classes `invariant`
 - [ ] Templates
-- [ ] Pragmas
+- [x] Pragmas
 - [ ] alias and with `alias with`
 - [ ] alias this `alias this`
 - [ ] Pointers `* &`
-- [ ] Bit Operations `~ & | ^ >> >>> <<`
+- [x] Bit Operations `~ & | ^ >> >>> <<`
 - [ ] Conditional Compilation `debug, version, static if, static assert, \_\_traits`
 - [ ] is Expression `is()`
 - [ ] Function Pointers, Delegates, and Lambdas `function delegate => toString`
